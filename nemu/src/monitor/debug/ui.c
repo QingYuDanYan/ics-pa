@@ -53,7 +53,7 @@ static struct {
   int (*handler) (char *);
 } cmd_table [] = {
   { "help", "Display informations about all supported commands", cmd_help },
-	{ "si [N]", "Pause after executed N steps. N = 1 by default.", cmd_si  },
+	{ "si", "Pause after executed N steps. N = 1 by default.", cmd_si  },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
 
