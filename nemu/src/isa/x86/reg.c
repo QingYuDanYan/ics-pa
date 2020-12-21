@@ -42,7 +42,7 @@ void reg_test() {
 
 void isa_reg_display() {
 	for (int i = 0 ; i < 8; i++)
-		printf("%-10s 0x%.8x    %d\n", reg_name(i, 4), reg_l(i), reg_l(i));
+		printf("%-6s 0x%.8x    %d\n", reg_name(i, 4), reg_l(i), reg_l(i));
 	
 	
 }
