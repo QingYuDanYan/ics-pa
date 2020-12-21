@@ -41,7 +41,7 @@ void reg_test() {
 }
 
 void isa_reg_display() {
-	printf(":");
+	printf(":\n");
 	
 }
 
