@@ -41,7 +41,7 @@ void reg_test() {
 }
 
 void isa_reg_display() {
-	for (int i = 0 ; i < 8; i--)
+	for (int i = 0 ; i < 8; i++)
 		printf("%-14s 0x%.8x    %d\n", reg_name(i, 4), reg_l(i), reg_l(i));
 	
 	
