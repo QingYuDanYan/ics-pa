@@ -43,10 +43,13 @@ void reg_test() {
 void isa_reg_display() {
 	for (int i = 0; i < 8; i++)
 		printf("%-6s 0x%.8x    %d\n", reg_name(i, 4), reg_l(i), reg_l(i));
+	printf("==========");
 	for (int i = 0; i < 8; i++)
 		printf("%-6s 0x%.8x    %d\n", reg_name(i, 2), reg_w(i), reg_w(i));
+	printf("==========");
 	for (int i = 0; i < 8; i++)
 		printf("%-6s 0x%.8x    %d\n", reg_name(i, 1), reg_b(i), reg_b(i));
+	printf("==========");
 }
 
 uint32_t isa_reg_str2val(const char *s, bool *success) {
