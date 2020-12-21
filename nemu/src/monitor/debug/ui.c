@@ -47,10 +47,13 @@ static int cmd_si(char *args) {
 		cpu_exec(n);
 	
 	}
-		
+
 	return 0;
 }
 
+static int cmd_info(char *args){
+	return 0;
+}
 
 static int cmd_help(char *args);
 
@@ -60,7 +63,8 @@ static struct {
   int (*handler) (char *);
 } cmd_table [] = {
   { "help", "Display informations about all supported commands", cmd_help },
-	{ "si", "Pause after executed N steps. N = 1 by default.", cmd_si  },
+	{ "si", "'si [N]' to pause after executed N steps. N = 1 by default.", cmd_si  },
+	{ "info", "'info r' to print values of regs, 'info w' to print the values of watch points", cmd_info},
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
 
