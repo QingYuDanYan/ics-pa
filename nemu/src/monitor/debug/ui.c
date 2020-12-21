@@ -52,6 +52,18 @@ static int cmd_si(char *args) {
 }
 
 static int cmd_info(char *args){
+	char* arg = strtok(NULL, " ");
+
+	if ( strcmp(arg, "r") == 0){
+		extern void isa_reg_display(void);
+		isa_reg_display();
+	}
+	else if (strcmp(arg, "w") == 0){
+		//TODO;
+	}
+	else
+		printf("unknown SUBCMD!\n");
+		
 	return 0;
 }
 
